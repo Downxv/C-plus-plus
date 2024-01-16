@@ -1,0 +1,13 @@
+﻿  语法.cpp
+C:\Users\李球安\Desktop\C++\语法.cpp(314,9): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\李球安\Desktop\C++\语法.cpp(316,15): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\李球安\Desktop\C++\语法.cpp(318,16): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\李球安\Desktop\C++\语法.cpp(387,11): warning C4858: 正在放弃返回值: This member function returns a bool indicating whether the container is empty and has no other effects. It is not useful to call this member function and discard the return value. Container adaptors don't provide 'clear()' member functions, but you can assign an empty object to them.
+C:\Users\李球安\Desktop\C++\语法.cpp(393,10): warning C4858: 正在放弃返回值: This member function returns a bool indicating whether the container is empty and has no other effects. It is not useful to call this member function and discard the return value. Container adaptors don't provide 'clear()' member functions, but you can assign an empty object to them.
+C:\Users\李球安\Desktop\C++\语法.cpp(394,9): warning C4834: 放弃具有 [[nodiscard]] 属性的函数的返回值
+C:\Users\李球安\Desktop\C++\语法.cpp(395,4): warning C4834: 放弃具有 [[nodiscard]] 属性的函数的返回值
+C:\Users\李球安\Desktop\C++\语法.cpp(396,4): warning C4834: 放弃具有 [[nodiscard]] 属性的函数的返回值
+C:\Users\李球安\Desktop\C++\语法.cpp(403,10): warning C4858: 正在放弃返回值: This member function returns a bool indicating whether the container is empty and has no other effects. It is not useful to call this member function and discard the return value. Use the 'clear()' member function if you want to erase all elements.
+C:\Users\李球安\Desktop\C++\语法.cpp(404,9): warning C4834: 放弃具有 [[nodiscard]] 属性的函数的返回值
+C:\Users\李球安\Desktop\C++\语法.cpp(119,6): warning C4101: “da1”: 未引用的局部变量
+  C++.vcxproj -> C:\Users\李球安\Desktop\C++\x64\Debug\C++.exe

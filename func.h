@@ -151,4 +151,26 @@ public:
 		cout << "狗在说话" << endl;
 	}
 };
+// 仿函数-函数对象
+class Myadd {
+public:
+	int operator()(int a, int b) {
+		return a + b;
+	}
+};
+void printma(Myadd& m, int a, int b);
+class Mysum {
+public:
+	int msum;
+	Mysum() {
+		this->msum = 0;
+	}
+	void operator()(int n) {
+		this->msum += n;
+		cout << this->msum << endl;
+	}
+};
+int add10(int n);
+bool ifgt10(int n);
+bool gt(int n, int m);
 #endif

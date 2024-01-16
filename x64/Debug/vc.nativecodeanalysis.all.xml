@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\李球安\source\repos\C++\</FILEPATH>
+      <FILENAME>func.cpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>未初始化变量 Circle::b。始终初始化成员变量(type.6)。</DESCRIPTION>
+    <FUNCTION>Circle::{ctor}</FUNCTION>
+    <DECORATED>??0Circle@@QEAA@NH@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Circle::b</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\李球安\source\repos\C++\</FILEPATH>
+      <FILENAME>func.cpp</FILENAME>
+      <LINE>49</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>未初始化变量 Circle::b。始终初始化成员变量(type.6)。</DESCRIPTION>
+    <FUNCTION>Circle::{ctor}</FUNCTION>
+    <DECORATED>??0Circle@@QEAA@AEBV0@@Z</DECORATED>
+    <FUNCLINE>49</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Circle::b</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\李球安\source\repos\C++\</FILEPATH>
+      <FILENAME>语法.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>未初始化变量 people::age。始终初始化成员变量(type.6)。</DESCRIPTION>
+    <FUNCTION>people::{ctor}</FUNCTION>
+    <DECORATED>??0people@@QEAA@XZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>people::age</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

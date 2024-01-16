@@ -101,3 +101,17 @@ Circle Circle::operator++(int) {
 void dospeak(Animal& a) {
 	a.speak();
 }
+// 仿函数做参数
+void printma(Myadd& m, int a, int b) {
+	cout << "仿函数做参数 " << m(a, b) << endl;
+}
+// 算法
+int add10(int n) {
+	return n + 10;
+}
+bool ifgt10(int n) {
+	return n > 10;
+}
+bool gt(int n, int m) {
+	return n > m;
+}

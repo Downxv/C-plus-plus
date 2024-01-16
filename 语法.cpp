@@ -8,6 +8,9 @@
 #include <queue>
 #include <list>
 #include <set>
+#include <map>
+#include<algorithm>
+#include<numeric>
 using namespace std;
 
 // 宏常量和常量
@@ -349,7 +352,6 @@ int main() {
 	int bk = v.back();
 	int vv = v[0];	vector<int>(v).swap(v); // 收缩内存
 	v.reserve(10); // 预留内存 插入大量数据时减少开辟内存的次数
-
 	// deque 双端数组
 	deque<int> deq;
 	deq.push_back(1);
@@ -438,10 +440,72 @@ int main() {
 	pair<string, int> pr("we", 3);
 	cout << "pair first " << pr.first << endl;
 	cout << "pair second " << pr.second << endl;
-	// map multimap
-
+	// map multimap 按key值排序
+	map<int, string> mp1;
+	map<int, string> mp2(mp1);
+	map<int, string> mp3 = mp2;
+	mp1.insert(pair<int, string>(2, "kk"));
+	mp1.insert(pair<int, string>(1, "kd"));
+	map<int, string>::iterator itr = mp1.find(2);
+	cout << "map find " << itr->second << endl;
+	for (map<int, string>::iterator it = mp1.begin(); it != mp1.end(); it++) {
+		cout << it->first << " " << it->second << endl;
+	}
+	cout << "map empty " << mp1.empty() << " map size " << mp1.size() << endl;
+	mp1.swap(mp2);
+	mp2.erase(1);
+	mp2.erase(mp2.begin());
+	mp2.clear();
+	map<int, string>::iterator it = mp2.find(1);
+	if (it != mp2.end()) {
+		cout << "map find " << it->second << endl;
+	}
+	else {
+		cout << "map find 未找到" << endl;
+	}
+	cout << "map count " << mp2.count(1) << endl;
 	// 算法
-
+	// 重载了函数调用的类称为函数对象或仿函数
+	Myadd ma;
+	cout << "仿函数 " << ma(3, 2) << endl;
+	printma(ma, 4, 5);
+	// 谓词 （返回值为bool的仿函数）(一个形参为一元谓词，两个参数为二元谓词)
+	// 算数仿函数 关系仿函数 包含在functional库中 略
+	// 常用算法
+	// for_each
+	vector<int> vct;
+	vct.push_back(1);
+	vct.push_back(2);
+	vct.push_back(3);
+	vct.push_back(4);
+	Mysum mm;
+	for_each(vct.begin(), vct.end(), mm);
+	vector<int> vct1;
+	vct1.resize(vct.size());
+	transform(vct.begin(), vct.end(), vct1.begin(), add10);
+	cout << "vct1 " << *(vct1.begin()) << endl;
+	vector<int>::iterator iti = find(vct1.begin(), vct1.end(), 11); // 查找自定义类型时需要重载==操作符
+	cout << "find " << *iti << endl;
+	vector<int>::iterator itt = find_if(vct1.begin(), vct1.end(), ifgt10); //
+	cout << "find_if " << *itt << endl;
+	cout << "binary_search " << binary_search(vct1.begin(), vct1.end(), 12) << endl; // 序列必须有序
+	cout << "count " << count(vct1.begin(), vct1.end(), 11) << endl;
+	cout << "count_if " << count_if(vct1.begin(), vct1.end(), ifgt10) << endl;
+	sort(vct1.begin(), vct1.end(), greater<int>()); // greater是标准库中的仿函数，还有其他的类型
+	random_shuffle(vct1.begin(), vct1.end()); // 乱序
+	// merge()
+	reverse(vct1.begin(), vct1.end());
+	copy(vct1.begin(), vct1.end(), vct.begin());
+	replace(vct1.begin(), vct1.end(), 11, 99);
+	replace_if(vct1.begin(), vct1.end(), ifgt10, 33);
+	swap(vct1, vct);
+	int ti = accumulate(vct.begin(), vct.end(), 0); // 累加
+	fill(vct.begin(), vct.end(), 55);
+	vector<int> vct2;
+	vct2.resize(vct1.size() + vct.size());
+	vector<int>::iterator tii_end = set_intersection(vct.begin(), vct.end(), vct1.begin(), vct1.end(), vct2.begin()); // 交集 返回的是迭代器
+	vector<int>::iterator su_end = set_union(vct.begin(), vct.end(), vct1.begin(), vct1.end(), vct2.begin()); // 并集
+	vector<int>::iterator sd_end = set_difference(vct.begin(), vct.end(), vct1.begin(), vct1.end(), vct2.begin()); // 差集
 	return 0;
 }
 
